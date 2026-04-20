@@ -1,6 +1,7 @@
 /* === ContactForm.jsx - Form đăng ký tư vấn === */
 import { useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
+import { contactAPI } from '../../services/api'
 import Button from '../common/Button'
 
 export default function ContactForm() {
@@ -28,20 +29,15 @@ export default function ContactForm() {
     if (!validate()) return
 
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)
-      })
-      const data = await res.json()
+      const data = await contactAPI.submit(form)
       if (data.success) {
         setSubmitted(true)
         showToast('Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm nhất.')
       } else {
         showToast(data.message || 'Gửi thất bại, vui lòng thử lại!', 'error')
       }
-    } catch {
-      showToast('Không thể kết nối đến server. Vui lòng thử lại!', 'error')
+    } catch (err) {
+      showToast(err.message || 'Không thể kết nối đến server. Vui lòng thử lại!', 'error')
     }
   }
 
