@@ -4,7 +4,7 @@
  * Copy file này vào: src/services/api.js trong project frontend
  * =================================================== */
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const BASE_URL = import.meta.env.VITE_API_URL
 
 // ── Helper: Lấy token từ localStorage ────────────────
 const getToken = () => localStorage.getItem('erp_token')

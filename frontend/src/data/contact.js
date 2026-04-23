@@ -6,9 +6,9 @@ export const contactInfo = {
   address: 'Đường Hữu Nghị, KCN Đô Thị và Dịch vụ VSIP Bắc Ninh, Phù Chẩn, Từ Sơn, Bắc Ninh',
   office: 'Số 02 Tôn Thất Tùng, Phường Kim Liên, Hà Nội',
   email: '[email protected]',
-  hotline: '0932 888 008',
-  zaloUrl: 'https://zalo.me/705355674357831591',
-  facebookUrl: 'https://www.facebook.com/Eurowindowriverpark',
+  hotline: '0382970723',
+  tiktokUrl: 'https://www.tiktok.com/@eurowindowriverpark0',
+  facebookUrl: 'https://www.facebook.com/profile.php?id=61567233022297',
 }
 
 /* Menu điều hướng - giống hệt navbar gốc */

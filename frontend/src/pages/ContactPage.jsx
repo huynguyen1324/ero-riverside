@@ -52,7 +52,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-3 pt-2">
-                <a href={contactInfo.zaloUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 bg-blue-500 text-white py-3 rounded-xl font-semibold hover:bg-blue-600 transition-colors">Zalo</a>
+                <a href={contactInfo.tiktokUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 bg-black text-white py-3 rounded-xl font-semibold hover:bg-gray-900 transition-colors">TikTok</a>
                 <a href={contactInfo.facebookUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 bg-blue-700 text-white py-3 rounded-xl font-semibold hover:bg-blue-800 transition-colors">Facebook</a>
               </div>
             </div>
