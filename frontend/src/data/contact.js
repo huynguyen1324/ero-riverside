@@ -7,7 +7,7 @@ export const contactInfo = {
   office: 'Số 02 Tôn Thất Tùng, Phường Kim Liên, Hà Nội',
   email: '[email protected]',
   hotline: '0382970723',
-  tiktokUrl: 'https://www.tiktok.com/@eurowindowriverpark0',
+  tiktokUrl: 'https://www.tiktok.com/@eroriverpark0',
   facebookUrl: 'https://www.facebook.com/profile.php?id=61567233022297',
 }
 
