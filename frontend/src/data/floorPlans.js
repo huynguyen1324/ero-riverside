@@ -3,55 +3,42 @@
 export const floorPlanCategories = [
   {
     id: 'tong-mat-bang',
-    title: 'Tổng mặt bằng',
+    title: 'Tổng mặt bằng quy hoạch',
+    desc: 'Quy hoạch tổng thể khu đô thị mới Ero Riverside với quy mô 200ha, hạt nhân trong chiến lược phát triển đô thị mở rộng Hà Nội - Bắc Ninh.',
     images: [
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb-20240408033507-fes6f.jpg',
+      '/images/mat_bang.jpg',
     ],
   },
   {
-    id: 'toa-park',
-    title: 'Mặt bằng căn hộ tòa Park',
+    id: 'biet-thu-song-lap',
+    title: 'Biệt thự song lập (3 tầng)',
+    desc: 'Diện tích từ 320-380m2/lô. Không gian thoáng, nội thất sang trọng, hài hòa và hợp lý, mang phong cách Châu Âu hiện đại.',
     images: [
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb1-20240408040542-jrvbv.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb2-20240408040542-psq02.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb3-20240408040542-acqvy.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb4-20240408040542-kc2qk.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb5-20240408040542-djvls.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb6-20240408040542-9gmkc.jpg',
+      '/images/biet_thu_song_lap.png',
     ],
   },
   {
-    id: 'toa-river',
-    title: 'Mặt bằng căn hộ tòa River',
+    id: 'biet-thu-don-lap',
+    title: 'Biệt thự đơn lập (2.5 tầng)',
+    desc: 'Diện tích 400-560m2. Thiết kế khép kín, có sân vườn, bể bơi, sân tennis riêng. Tầm nhìn hướng sông nhân tạo lãng mạn, an ninh tuyệt đối 24/24.',
     images: [
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb-river-1-20240408040441-_sjeo.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb-river-2-20240408040441-ovy6e.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb-river-3-20240408040441-alihr.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb-river-4-20240408040441-69ltg.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb-river-5-20240408040441-3gtzc.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb-river-6-20240408040441-wdcdq.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb-river-7-20240408040441-l6v02.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb-river-8-20240408040441-dhkv0.jpg',
-      'https://w.ladicdn.com/s1550x1150/60c01a633e70ad002097e7bb/mb-river-9-20240408040441-ftr75.jpg',
+      '/images/biet_thu_don_lap.png',
+    ],
+  },
+  {
+    id: 'shophouse-234',
+    title: 'Shophouse 234',
+    desc: 'Nổi bật giữa trung tâm dự án là nơi an cư lý tưởng của gia đình. Diện tích phù hợp cung cấp không gian rộng rãi để chủ nhân thoải mái thể hiện phong cách riêng trong thiết kế và bố trí nội thất. Diện tích xây dựng: 60-72m², Diện tích sàn: 186-224m², Diện tích đất: 100-253m²',
+    images: [
+      '/images/shophouse_234.jpg',
     ],
   },
   {
     id: 'shophouse',
-    title: 'Mặt bằng tổng thể Shophouse khối đế',
+    title: 'Shophouse',
+    desc: 'Dòng sản phẩm tiền năng thương mại lớn nhất dự án với lợi thế không gian thương mại rộng lớn, kết nối trực tiếp với trục chính đại đô thị VSIP Bắc Ninh, đường Hữu Nghị rộng 56m. Đây sẽ là nơi diễn ra các hoạt động buôn bán, mua sắm giải trí sôi động đem lại dòng tiền bền vững cho gia chủ. Diện tích xây dựng: 72m², Diện tích sàn: 222m², Diện tích đất: 120-192m²',
     images: [
-      'https://w.ladicdn.com/s1550x1250/60c01a633e70ad002097e7bb/erp_mat-bang-shophouse_100224-01-20250415120339-048um.jpg',
-      'https://w.ladicdn.com/s1550x1250/60c01a633e70ad002097e7bb/erp_mat-bang-shophouse_100224-02-20250415120339-vu-0r.jpg',
-    ],
-  },
-  {
-    id: 'tmdv',
-    title: 'Mặt bằng tổng thể căn hộ TMDV',
-    images: [
-      'https://w.ladicdn.com/s1550x1250/60c01a633e70ad002097e7bb/erp_mat-bang_banner-wen_tmdv_070725-20250707105744-cerzm.jpg',
-      'https://w.ladicdn.com/s1550x1250/60c01a633e70ad002097e7bb/erp_mat-bang_banner-wen_tmdv_070725-v1-20250707105745-5wqwo.jpg',
-      'https://w.ladicdn.com/s1550x1250/60c01a633e70ad002097e7bb/erp_mat-bang_banner-wen_tmdv_070725-v2-20250707105745-rqiwl.jpg',
-      'https://w.ladicdn.com/s1550x1250/60c01a633e70ad002097e7bb/erp_mat-bang_banner-wen_tmdv_070725-v3-20250707105746-dg5vc.jpg',
-      'https://w.ladicdn.com/s1550x1250/60c01a633e70ad002097e7bb/erp_mat-bang_banner-wen_tmdv_070725-v4-20250707105746-obb3f.jpg',
+      '/images/shophouse.jpg',
     ],
   },
 ]

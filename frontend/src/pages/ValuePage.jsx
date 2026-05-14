@@ -1,34 +1,34 @@
 /* === ValuePage.jsx - Trang giá trị bền vững === */
 import SectionTitle from '../components/common/SectionTitle'
 import Button from '../components/common/Button'
-import { images } from '../data/contact'
+import { contactInfo, images } from '../data/contact'
 
 const coreValues = [
   {
-    id: 'can-bang',
-    title: 'Cân bằng',
-    desc: 'Ero Riverside kiến tạo không gian sống hài hòa giữa nhịp sống đô thị năng động và thiên nhiên trong lành, giúp cư dân tận hưởng sự cân bằng trọn vẹn giữa công việc, nghỉ ngơi và cuộc sống.',
+    id: 'phap-ly',
+    title: 'Pháp lý',
+    desc: 'Khu nhà ở Phù Chẩn đảm bảo sự an tâm tuyệt đối cho chủ sở hữu với hệ thống hồ sơ pháp lý minh bạch, được phê duyệt chính thức bởi UBND tỉnh Bắc Ninh.',
     image: images.valueSection,
   },
   {
-    id: 'an-yen',
-    title: 'An yên',
-    desc: 'Sở hữu môi trường sống xanh, yên tĩnh cùng hệ thống tiện ích khép kín, Ero Riverside mang đến cảm giác thư thái, riêng tư – nơi mỗi ngày trôi qua đều nhẹ nhàng và bình yên.',
+    id: 'quy-hoach',
+    title: 'Quy hoạch',
+    desc: 'Dự án được quy hoạch đồng bộ với mật độ xây dựng hợp lý, dành nhiều không gian cho cây xanh, công viên và các công trình công cộng hiện đại.',
     image: images.lifestyle,
   },
   {
-    id: 'hien-dai',
-    title: 'Hiện đại',
-    desc: 'Được quy hoạch đồng bộ với hạ tầng tiên tiến và tiện ích thông minh, Ero Riverside đáp ứng chuẩn sống hiện đại, nâng tầm trải nghiệm cho cộng đồng cư dân trẻ, năng động.',
+    id: 'ha-tang',
+    title: 'Hạ tầng',
+    desc: 'Hệ thống hạ tầng kỹ thuật đạt chuẩn với trạm biến áp, trạm cấp nước và xử lý nước thải riêng biệt, mang lại cuộc sống tiện nghi và bền vững.',
     image: images.interiorView,
   },
 ]
 
 const investmentReasons = [
-  { title: 'Dòng tiền cho thuê ổn định', desc: 'Ero Riverside thừa hưởng lợi thế từ khu công nghiệp VSIP với hàng chục nghìn chuyên gia và lao động, tạo nhu cầu lớn về nhà ở, kinh doanh và dịch vụ – đảm bảo khả năng khai thác cho thuê bền vững.' },
-  { title: 'Gia tăng giá trị theo hạ tầng', desc: 'Khu vực Từ Sơn đang phát triển mạnh về giao thông và đô thị hóa, với nhiều tuyến đường trọng điểm và quy hoạch đồng bộ, giúp bất động sản có dư địa tăng giá rõ rệt trong trung và dài hạn.' },
-  { title: 'Hưởng lợi từ làn sóng FDI', desc: 'Bắc Ninh là điểm đến của nhiều tập đoàn lớn, kéo theo nhu cầu nhà ở, thương mại và dịch vụ tăng cao – tạo động lực tăng trưởng giá trị bất động sản bền vững.' },
-  { title: 'Thanh khoản cao, dễ khai thác kinh doanh', desc: 'Sự đa dạng loại hình như shophouse, nhà phố, căn hộ cùng cộng đồng cư dân – chuyên gia đông đúc giúp bất động sản dễ mua bán, dễ kinh doanh và tối ưu lợi nhuận đầu tư.' },
+  { title: 'Vị trí chiến lược tại Phù Chẩn', desc: 'Nằm tại xã Phù Chẩn, huyện Từ Sơn – khu vực đang có tốc độ đô thị hóa nhanh và hạ tầng giao thông ngày càng hoàn thiện, mang lại tiềm năng tăng giá trị cao.' },
+  { title: 'Kết nối vùng thuận tiện', desc: 'Tiếp giáp Quốc lộ 1 mới và các trục đường tỉnh lộ, giúp việc di chuyển đến các khu công nghiệp và trung tâm kinh tế lân cận trở nên dễ dàng.' },
+  { title: 'Hạ tầng kỹ thuật hoàn chỉnh', desc: 'Dự án đã hoàn thiện san nền và quy hoạch hệ thống điện, nước, thoát nước bài bản, sẵn sàng cho việc triển khai xây dựng và bàn giao.' },
+  { title: 'Cơ sở hạ tầng xã hội đồng bộ', desc: 'Gần các khu dân cư hiện hữu và đầy đủ tiện ích xã hội, tạo điều kiện thuận lợi cho việc sinh sống và kinh doanh dịch vụ.' },
 ]
 
 export default function ValuePage() {
@@ -36,18 +36,18 @@ export default function ValuePage() {
     <>
       <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={images.valueSection} alt="" className="w-full h-full object-cover" />
+          <img src={images.mapDetail} alt={`Bản đồ vị trí ${contactInfo.projectName}`} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-teal-900/80" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Giá trị vững bền</h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto">Biểu tượng cân bằng hoàn hảo giữa An yên và Hiện đại, mang lại giá trị sống vững bền cho cộng đồng cư dân</p>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">Tổng quan về {contactInfo.projectName} — Dự án đô thị hiện đại tại Bắc Ninh</p>
         </div>
       </section>
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle title="Giá trị cốt lõi" subtitle="Ero Riverside mang lại giá trị sống vững bền và khai mở tiềm năng khu vực" />
+          <SectionTitle title="Giá trị cốt lõi" subtitle={`${contactInfo.projectName} mang lại giá trị sống vững bền và khai mở tiềm năng khu vực`} />
           <div className="space-y-16 lg:space-y-24">
             {coreValues.map((value, index) => (
               <div key={value.id} className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">

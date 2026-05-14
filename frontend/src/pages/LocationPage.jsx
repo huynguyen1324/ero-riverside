@@ -1,19 +1,20 @@
 /* === LocationPage.jsx - Trang vị trí dự án === */
 import SectionTitle from '../components/common/SectionTitle'
 import Button from '../components/common/Button'
-import { images } from '../data/contact'
+import { contactInfo, images } from '../data/contact'
 
 const connections = [
-  { label: 'Thành phố Bắc Ninh', time: '15 phút' },
-  { label: 'Thủ đô Hà Nội', time: '20 phút' },
-  { label: 'Sân bay quốc tế Nội Bài', time: '30 phút' },
+  { label: 'Quốc lộ 1B', desc: 'Tiếp giáp trực tiếp, kết nối Bắc Ninh - Lạng Sơn' },
+  { label: 'Cầu Thanh Trì', desc: 'Mạng lưới giao thông trọng điểm rút ngắn khoảng cách với Thủ đô' },
+  { label: 'Nút giao 271', desc: 'Nằm song song cầu Đại Đình hiện đại, phục vụ giao thông thuận tiện' },
+  { label: 'Hà Nội & Bắc Ninh', desc: 'Cách trung tâm Hà Nội 18km, trung tâm TP Bắc Ninh 15km' },
 ]
 
 const advantages = [
-  { title: 'Vị trí “siêu kết nối” chiến lược', desc: 'Nằm tại tâm điểm giao thoa của 3 tuyến hạ tầng trọng điểm quốc gia, Centa Riverside mang đến khả năng kết nối nhanh chóng, thuận tiện đến các khu vực kinh tế – đô thị lớn.' },
-  { title: 'Tâm điểm đại đô thị VSIP Từ Sơn', desc: 'Tọa lạc giữa lòng khu đô thị – công nghiệp – dịch vụ hiện đại, dự án thừa hưởng hệ sinh thái phát triển đồng bộ và năng động.' },
-  { title: 'Cửa ngõ liên kết Hà Nội – Bắc Ninh', desc: 'Sở hữu vị trí giao thoa giữa Thủ đô Hà Nội và vùng đất Bắc Ninh giàu truyền thống, mở ra cơ hội kết nối văn hóa – kinh tế đa chiều.' },
-  { title: 'Hệ sinh thái xanh, sống trong lành', desc: 'Bao quanh bởi không gian xanh và quy hoạch hiện đại, mang đến môi trường sống cân bằng, gần gũi thiên nhiên.' },
+  { title: 'Tâm điểm Đô thị mở rộng', desc: 'Đóng vai trò hạt nhân trong chiến lược phát triển đô thị mở rộng của cả Hà Nội và Bắc Ninh.' },
+  { title: 'Địa linh nhân kiệt', desc: 'Vùng đất Phù Chẩn mang đậm dấu ấn Kinh Bắc, hội tụ đầy đủ các yếu tố thuận lợi nhất để hình thành đô thị kiểu mẫu.' },
+  { title: 'Giao thông khác mức', desc: 'Hệ thống nút giao thông hiện đại giúp việc di chuyển đến các khu trung tâm lân cận trở nên nhanh chóng.' },
+  { title: 'Tiềm năng tăng giá', desc: 'Sự hoàn thiện của hạ tầng giao thông (Cầu 271, Đại Đình) là đòn bẩy mạnh mẽ cho giá trị bất động sản.' },
 ]
 
 export default function LocationPage() {
@@ -35,10 +36,10 @@ export default function LocationPage() {
           <SectionTitle title="Tọa độ vàng phía Đông Bắc" subtitle="Vị trí đắc địa cạnh ga Trung Mầu, tận hưởng ưu thế kép" />
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
             <div className="lg:col-span-3 overflow-hidden rounded-2xl shadow-xl">
-              <img src={images.mapDetail} alt="Bản đồ vị trí Ero Riverside" className="w-full object-cover" />
+              <img src={images.mapDetail} alt={`Bản đồ vị trí ${contactInfo.projectName}`} className="w-full object-cover" />
             </div>
             <div className="lg:col-span-2 space-y-3">
-              <h3 className="font-body text-xl font-bold text-teal-900 mb-4">Kết nối giao thông</h3>
+              <h3 className="font-body text-xl font-bold text-teal-900 mb-4">Vị trí tiếp giáp</h3>
               {connections.map((item, i) => (
                 <div key={i} className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-teal-50 transition-colors">
                   <div className="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center text-xs font-bold flex-shrink-0">
@@ -46,8 +47,8 @@ export default function LocationPage() {
                   </div>
                   <div className="flex-1">
                     <p className="font-medium text-dark-700">{item.label}</p>
+                    <p className="text-xs text-dark-400">{item.desc}</p>
                   </div>
-                  <span className="text-teal-600 font-semibold text-sm whitespace-nowrap">{item.time}</span>
                 </div>
               ))}
             </div>

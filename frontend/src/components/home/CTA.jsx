@@ -1,12 +1,12 @@
 /* === CTA.jsx - Call-to-Action section trên trang chủ === */
 import { Link } from 'react-router-dom'
-import { images } from '../../data/contact'
+import { contactInfo, images } from '../../data/contact'
 
 const quickLinks = [
   { label: 'Chính sách bán hàng', path: '/chinh-sach-ban-hang', desc: 'Ưu đãi hấp dẫn, hỗ trợ tài chính' },
   { label: 'Vị trí dự án', path: '/vi-tri', desc: 'Tâm điểm kết nối, bứt phá kế hoạch' },
   { label: 'Tiện ích nội khu', path: '/tien-ich', desc: 'Bể bơi, TTTM, sân thể thao,...' },
-  { label: 'Mặt bằng căn hộ', path: '/mat-bang', desc: 'Xem chi tiết layout các căn hộ' },
+  { label: 'Mặt bằng dự án', path: '/mat-bang', desc: 'Xem chi tiết quy hoạch và mẫu nhà' },
 ]
 
 export default function CTA() {
@@ -20,7 +20,7 @@ export default function CTA() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
-            Khám phá <span className="text-gold-200">Ero Riverside</span>
+            Khám phá <span className="text-gold-200">{contactInfo.projectName}</span>
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
             Tìm hiểu chi tiết từng khía cạnh của dự án để đưa ra quyết định đầu tư sáng suốt.

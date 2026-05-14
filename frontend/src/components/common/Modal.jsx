@@ -3,7 +3,7 @@
  */
 import { useEffect } from 'react'
 
-export default function Modal({ isOpen, onClose, title, children }) {
+export default function Modal({ isOpen, onClose, title, children, maxWidth = 'max-w-lg', noPadding = false }) {
   // Khóa scroll body khi modal mở
   useEffect(() => {
     if (isOpen) {
@@ -17,7 +17,7 @@ export default function Modal({ isOpen, onClose, title, children }) {
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center">
       {/* Overlay tối */}
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -25,9 +25,9 @@ export default function Modal({ isOpen, onClose, title, children }) {
       />
 
       {/* Nội dung modal */}
-      <div className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto animate-fade-in-up">
+      <div className={`relative bg-white shadow-2xl flex flex-col animate-fade-in-up ${maxWidth} w-full max-h-[98vh] overflow-hidden rounded-2xl`}>
         {/* Header modal */}
-        <div className="flex items-center justify-between p-5 border-b border-gray-100">
+        <div className="flex items-center justify-between p-5 border-b border-gray-100 flex-shrink-0">
           <h3 className="font-display font-semibold text-xl text-teal-900">
             {title}
           </h3>
@@ -40,7 +40,7 @@ export default function Modal({ isOpen, onClose, title, children }) {
         </div>
 
         {/* Body modal */}
-        <div className="p-5">
+        <div className={`${noPadding ? 'p-0' : 'p-5'} overflow-y-auto flex-grow`}>
           {children}
         </div>
       </div>

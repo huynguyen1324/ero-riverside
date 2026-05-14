@@ -10,12 +10,12 @@ export default function Intro() {
           <div className="relative">
             <img
               src={images.projectOverview}
-              alt="Tổng quan dự án Ero Riverside"
+              alt={`Tổng quan dự án ${contactInfo.projectName}`}
               className="rounded-2xl shadow-xl w-full object-cover object-left aspect-[4/3]"
             />
             <div className="absolute -bottom-6 -right-4 lg:-right-8 bg-teal-800 text-white rounded-xl p-5 shadow-xl">
-              <p className="text-3xl font-display font-bold text-gold-200">14.6 ha</p>
-              <p className="text-sm text-white/70 mt-1">Tổng diện tích</p>
+              <p className="text-3xl font-display font-bold text-gold-200">22.5 ha</p>
+              <p className="text-sm text-white/70 mt-1">Quy hoạch GĐ 1</p>
             </div>
           </div>
 
@@ -25,18 +25,15 @@ export default function Intro() {
             </span>
 
             <h2 className="font-display text-3xl md:text-4xl font-bold text-teal-900 mt-3 mb-5 leading-tight">
-              Bản hòa ca hoàn hảo của chất sống hiện đại và an yên
+              Một không gian Châu Âu trong lòng Hà Nội - Bắc Ninh
             </h2>
 
             <p className="text-dark-500 text-lg leading-relaxed mb-4">
-              <strong className="text-teal-800">{contactInfo.projectName}</strong> là nơi nuôi dưỡng cảm xúc
-              và nâng tầm trải nghiệm, kiến tạo một cộng đồng văn minh phía Đông Bắc Hà Nội.
+              <strong className="text-teal-800">Ero Riverside</strong> là khu đô thị hạt nhân trong chiến lược phát triển mở rộng của Hà Nội và Bắc Ninh, kiến tạo một cộng đồng sống văn minh và hiện đại trên quy mô 200ha.
             </p>
 
             <p className="text-dark-500 leading-relaxed mb-8">
-              Được phát triển bởi <strong className="text-teal-800">{contactInfo.developer}</strong>,
-              Ero Riverside gieo nguồn cảm hứng, khai mở cuộc sống thịnh vượng bên sông,
-              mang đến trải nghiệm hệ tiện ích đa dạng, hiện đại.
+              Sở hữu vị trí đắc địa tại xã Phù Chẩn, dự án được quy hoạch đồng bộ theo chuẩn mực quốc tế, mang đậm dấu ấn kiến trúc Châu Âu hài hòa với cảnh sắc thiên nhiên Kinh Bắc.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">

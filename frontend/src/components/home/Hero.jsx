@@ -1,13 +1,13 @@
 /* === Hero.jsx - Banner lớn trang chủ === */
 import Button from '../common/Button'
-import { images } from '../../data/contact'
+import { images, contactInfo } from '../../data/contact'
 
 export default function Hero() {
   return (
     <section className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden">
       <img
         src={images.heroBanner}
-        alt="Ero Riverside toàn cảnh"
+        alt={`${contactInfo.projectName} toàn cảnh`}
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="hero-overlay absolute inset-0" />
@@ -16,18 +16,18 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl">
             <span className="inline-block px-4 py-1.5 bg-teal-500/90 text-white text-sm font-semibold rounded-full mb-5 animate-fade-in">
-              Sổ hồng sẵn sàng — Nhận nhà ở ngay
+              Quy hoạch đồng bộ — Pháp lý minh bạch
             </span>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 animate-fade-in-up">
-              Giá trị bền vững<br />
-              <span className="text-gold-200">Sinh lời vượt trội</span>
+              Đô thị mới<br />
+              <span className="text-gold-200">Ero Riverside</span>
             </h1>
 
             <p className="text-white text-lg md:text-xl leading-relaxed mb-8 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              BIỆT THỰ VEN SÔNG HIẾM CÓ 
+              Một không gian Châu Âu trong lòng Hà Nội - Bắc Ninh
               <br />
-              NGAY TÂM ĐIỂM GA METRO TRUNG MẦU
+              HẠ TẦNG HOÀN HẢO — TẦM NHÌN CHIẾN LƯỢC
             </p>
 
             <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>

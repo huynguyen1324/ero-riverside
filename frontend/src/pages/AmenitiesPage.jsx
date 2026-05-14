@@ -2,7 +2,7 @@
 import SectionTitle from '../components/common/SectionTitle'
 import Button from '../components/common/Button'
 import { amenities, amenityFeatures } from '../data/amenities'
-import { images } from '../data/contact'
+import { contactInfo, images } from '../data/contact'
 
 export default function AmenitiesPage() {
   return (
@@ -20,7 +20,7 @@ export default function AmenitiesPage() {
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle title="Hệ tiện ích đẳng cấp" subtitle="Mỗi phút giây tại Ero Riverside là trải nghiệm trọn vẹn" />
+          <SectionTitle title="Hệ tiện ích đồng bộ" subtitle={`Mỗi phút giây tại ${contactInfo.projectName} là trải nghiệm trọn vẹn`} />
           <div className="space-y-16 lg:space-y-24">
             {amenities.map((item, index) => (
               <div key={item.id} className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -42,7 +42,7 @@ export default function AmenitiesPage() {
 
       <section className="py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle title="Trang thiết bị hiện đại" subtitle="Chuỗi trang thiết bị cao cấp đi kèm mỗi căn hộ" />
+          <SectionTitle title="Hạ tầng kỹ thuật" subtitle="Chuỗi trang thiết bị và hạ tầng cao cấp đi kèm dự án" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {amenityFeatures.map((feat, i) => (
               <div key={i} className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-sm border border-teal-100/50">

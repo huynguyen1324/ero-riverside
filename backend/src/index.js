@@ -51,7 +51,7 @@ app.use('/api', rateLimit({
 // Rate limit riêng cho auth (chặt hơn — chống brute-force)
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 10,
+  max: 50, // Tăng lên 50 để tránh block khi dev (HMR, refresh liên tục)
   message: { success: false, message: 'Quá nhiều lần thử, thử lại sau 15 phút.' },
 })
 

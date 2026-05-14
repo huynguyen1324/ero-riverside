@@ -2,6 +2,7 @@
 import { highlights } from '../../data/highlights'
 import Card from '../common/Card'
 import SectionTitle from '../common/SectionTitle'
+import { contactInfo } from '../../data/contact'
 
 export default function Highlights() {
   return (
@@ -9,7 +10,7 @@ export default function Highlights() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="Điểm nổi bật"
-          subtitle="Những yếu tố tạo nên giá trị vượt trội của Ero Riverside"
+          subtitle={`Những yếu tố tạo nên giá trị vượt trội của ${contactInfo.projectName}`}
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

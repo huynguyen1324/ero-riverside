@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useAuth } from '../contexts/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import Button from '../components/common/Button'
+import { contactInfo } from '../data/contact'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
 
@@ -62,7 +63,7 @@ export default function AccountPage() {
             <h1 className="font-display text-2xl font-bold text-teal-900">
               {user?.name || 'Người dùng'}
             </h1>
-            <p className="text-dark-500 mt-1">Thành viên Ero Riverside</p>
+            <p className="text-dark-500 mt-1">Thành viên {contactInfo.projectName}</p>
 
             <div className="mt-6 space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

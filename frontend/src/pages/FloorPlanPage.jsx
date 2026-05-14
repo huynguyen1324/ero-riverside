@@ -11,6 +11,8 @@ export default function FloorPlanPage() {
   const [lightboxImage, setLightboxImage] = useState(null)
   const activeCategory = floorPlanCategories.find((c) => c.id === activeTab)
 
+  const canZoom = !['biet-thu-song-lap', 'biet-thu-don-lap'].includes(activeTab)
+
   return (
     <>
       <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
@@ -20,7 +22,7 @@ export default function FloorPlanPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Mặt bằng dự án</h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto">Tổng mặt bằng và layout chi tiết các căn hộ</p>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">Tổng mặt bằng và layout chi tiết các mẫu nhà</p>
         </div>
       </section>
 
@@ -41,6 +43,11 @@ export default function FloorPlanPage() {
               </button>
             ))}
           </div>
+          {activeCategory && (
+            <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
+              <p className="text-dark-500 text-lg leading-relaxed">{activeCategory.desc}</p>
+            </div>
+          )}
 
           {activeCategory && (
             <div className={`grid gap-5 ${
@@ -49,15 +56,17 @@ export default function FloorPlanPage() {
               {activeCategory.images.map((img, i) => (
                 <div
                   key={i}
-                  className="group cursor-pointer overflow-hidden rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition-shadow relative"
-                  onClick={() => setLightboxImage(img)}
+                  className={`group overflow-hidden rounded-xl shadow-md border border-gray-100 transition-shadow relative ${canZoom ? 'cursor-pointer hover:shadow-xl' : ''}`}
+                  onClick={() => canZoom && setLightboxImage(img)}
                 >
                   <img src={img} alt={`${activeCategory.title} - ${i + 1}`} className="w-full object-contain bg-gray-50 group-hover:scale-[1.02] transition-transform duration-300" />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-                    <span className="opacity-0 group-hover:opacity-100 bg-white/90 rounded-full px-4 py-2 text-sm font-medium text-teal-800 shadow transition-opacity">
-                      Phóng to
-                    </span>
-                  </div>
+                  {canZoom && (
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                      <span className="opacity-0 group-hover:opacity-100 bg-white/90 rounded-full px-4 py-2 text-sm font-medium text-teal-800 shadow transition-opacity">
+                        Phóng to
+                      </span>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -69,8 +78,15 @@ export default function FloorPlanPage() {
         </div>
       </section>
 
-      <Modal isOpen={!!lightboxImage} onClose={() => setLightboxImage(null)} title={activeCategory?.title || 'Mặt bằng'}>
-        {lightboxImage && <img src={lightboxImage} alt="Mặt bằng chi tiết" className="w-full rounded-lg" />}
+      <Modal 
+        isOpen={!!lightboxImage} 
+        onClose={() => setLightboxImage(null)} 
+        title={activeCategory?.title || 'Mặt bằng'}
+        maxWidth="max-w-[92vw]"
+      >
+        {lightboxImage && (
+          <img src={lightboxImage} alt="Mặt bằng chi tiết" className="w-full block rounded-lg" />
+        )}
       </Modal>
     </>
   )

@@ -2,7 +2,7 @@
 import { Navigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import RegisterForm from '../components/forms/RegisterForm'
-import { images } from '../data/contact'
+import { images, contactInfo } from '../data/contact'
 
 export default function RegisterPage() {
   const { isLoggedIn } = useAuth()
@@ -11,7 +11,7 @@ export default function RegisterPage() {
   return (
     <section className="min-h-screen flex">
       <div className="hidden lg:block lg:w-1/2 relative">
-        <img src={images.valueSection} alt="Ero Riverside" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={images.valueSection} alt={contactInfo.projectName} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-teal-900/60" />
         <div className="absolute bottom-16 left-10 right-10">
           <h2 className="font-display text-3xl font-bold text-white leading-snug">

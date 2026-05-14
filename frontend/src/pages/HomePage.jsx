@@ -2,7 +2,7 @@
  * Gồm: Hero banner + Giới thiệu + Điểm nổi bật + CTA.
  */
 import Hero from '../components/home/Hero'
-import Intro from '../components/home/Intro'
+import Stats from '../components/home/Stats'
 import Highlights from '../components/home/Highlights'
 import CTA from '../components/home/CTA'
 
@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Intro />
+      <Stats />
       <Highlights />
       <CTA />
     </>

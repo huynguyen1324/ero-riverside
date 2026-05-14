@@ -2,28 +2,46 @@
 
 export const productTypes = [
   {
-    id: 'chung-cu',
-    title: 'Căn hộ chung cư',
-    subtitle: 'Quỹ căn 3PN view sông cuối cùng',
-    desc: 'Những căn hộ cuối cùng tại Ero Riverside đang được mở bán. Dự án có giá hấp dẫn nhất thị trường cùng chính sách bán hàng linh hoạt. Hệ thống trang thiết bị hiện đại, chuỗi tiện ích nội khu đa dạng.',
-    priceFrom: '2.99 tỷ',
-    image: '/images/can-ho.jpg',
+    id: 'biet-thu-song-lap',
+    title: 'Biệt thự song lập',
+    subtitle: 'Cao 3 tầng, không gian sống xanh mát',
+    desc: 'Thiết kế hiện đại với kích thước lô đất 8,5x20m, mang lại không gian sống thoáng đãng, gần gũi với thiên nhiên.',
+    priceFrom: 'Liên hệ',
+    image: '/images/biet_thu_song_lap.png',
+  },
+  {
+    id: 'biet-thu-don-lap',
+    title: 'Biệt thự đơn lập',
+    subtitle: 'Cao 2,5 tầng, đa dạng diện tích',
+    desc: 'Các lô đất biệt thự với kích thước đa dạng (20x20m; 26x20m; 28x20m), kiến trúc sang trọng, khẳng định đẳng cấp chủ nhân.',
+    priceFrom: 'Liên hệ',
+    image: '/images/biet_thu_don_lap.png',
+  },
+  {
+    id: 'shophouse-234',
+    title: 'Shophouse 234',
+    subtitle: 'Nơi an cư lý tưởng giữa trung tâm dự án',
+    desc: 'Nổi bật giữa trung tâm dự án là nơi an cư lý tưởng của gia đình. Diện tích phù hợp cung cấp không gian rộng rãi để chủ nhân thoải mái thể hiện phong cách riêng trong thiết kế và bố trí nội thất.',
+    priceFrom: 'Liên hệ',
+    image: '/images/shophouse_234.jpg',
+    specs: {
+      construction: '60 - 72 m²',
+      floor: '186 - 224 m²',
+      land: '100 - 253 m²'
+    }
   },
   {
     id: 'shophouse',
-    title: 'Shophouse khối đế',
-    subtitle: 'Đón sóng giao thương quốc tế - Sát cầu Đông Trù & Cổ Loa',
-    desc: 'Thiết kế thông minh 3-4 tầng, diện tích từ 109,8m² - 321,9m². Kết hợp linh hoạt giữa ở - cho thuê - kinh doanh. Vỉa hè rộng thoáng thu hút khách, tối ưu lợi nhuận lâu dài.',
+    title: 'Shophouse',
+    subtitle: 'Dòng sản phẩm thương mại năng động',
+    desc: 'Dòng sản phẩm tiền năng thương mại lớn nhất dự án với lợi thế không gian thương mại rộng lớn, kết nối trực tiếp với trục chính đại đô thị VSIP Bắc Ninh, đường Hữu Nghị rộng 56m. Đây sẽ là nơi diễn ra các hoạt động buôn bán, mua sắm giải trí sôi động đem lại dòng tiền bền vững cho gia chủ dù là đầu tư kinh doanh hay cho thuê.',
     priceFrom: 'Liên hệ',
     image: '/images/shophouse.jpg',
-  },
-  {
-    id: 'tmdv',
-    title: 'Căn hộ thương mại dịch vụ',
-    subtitle: 'Tiết kiệm tới 60% giá trị so với dự án lân cận',
-    desc: 'Mức giá chỉ từ 44 triệu/m², tương đương 30% - 40% giá căn hộ các dự án lân cận. Thiết kế linh hoạt, có thể bố trí thành căn hộ hai chìa khóa, vừa ở vừa cho thuê.',
-    priceFrom: '44 triệu/m²',
-    image: '/images/tmdv.webp',
+    specs: {
+      construction: '72 m²',
+      floor: '222 m²',
+      land: '120 - 192 m²'
+    }
   },
 ]
 
@@ -31,7 +49,7 @@ export const salesPolicies = [
   {
     id: 1,
     title: 'Hỗ trợ vay ngân hàng',
-    desc: 'Hỗ trợ vay lên tới 70% giá trị căn hộ, lãi suất ưu đãi.',
+    desc: 'Hỗ trợ vay lên tới 70% giá trị sản phẩm, lãi suất ưu đãi.',
   },
   {
     id: 2,

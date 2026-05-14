@@ -53,10 +53,31 @@ export default function PolicyPage() {
                 <h3 className="font-display text-2xl md:text-3xl font-bold text-teal-900 mb-2">{activeProduct.title}</h3>
                 <p className="text-teal-700 font-semibold text-lg mb-4">{activeProduct.subtitle}</p>
                 <p className="text-dark-500 leading-relaxed mb-6">{activeProduct.desc}</p>
-                <div className="bg-teal-50 rounded-xl p-5 mb-6">
-                  <p className="text-sm text-dark-500">Giá từ</p>
-                  <p className="text-2xl font-display font-bold text-teal-800">{activeProduct.priceFrom}</p>
-                </div>
+                {activeProduct.specs && (
+                  <div className="bg-teal-50 rounded-xl p-5 mb-6 border border-teal-200">
+                    <h4 className="font-semibold text-teal-900 mb-3">Thông tin</h4>
+                    <div className="space-y-2 text-sm text-dark-500">
+                      <div className="flex justify-between">
+                        <span>Diện tích xây dựng:</span>
+                        <span className="font-medium text-dark-600">{activeProduct.specs.construction}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Diện tích sàn:</span>
+                        <span className="font-medium text-dark-600">{activeProduct.specs.floor}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Diện tích đất:</span>
+                        <span className="font-medium text-dark-600">{activeProduct.specs.land}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {!activeProduct.specs && (
+                  <div className="bg-teal-50 rounded-xl p-5 mb-6">
+                    <p className="text-sm text-dark-500">Giá từ</p>
+                    <p className="text-2xl font-display font-bold text-teal-800">{activeProduct.priceFrom}</p>
+                  </div>
+                )}
                 <div className="flex flex-wrap gap-3">
                   <Button to="/lien-he" variant="orange">Nhận báo giá chi tiết</Button>
                   <Button to="/mat-bang" variant="outline">Xem mặt bằng</Button>
@@ -86,8 +107,8 @@ export default function PolicyPage() {
 
       <section className="py-16" style={{ background: 'linear-gradient(135deg, #03989e 0%, #034f58 100%)' }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Sổ hồng sẵn sàng — Nhận nhà ở ngay</h3>
-          <p className="text-white/70 mb-8 text-lg">Pháp lý minh bạch, sở hữu lâu dài. Liên hệ ngay để nhận tư vấn chi tiết.</p>
+          <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">Quy hoạch đồng bộ — Pháp lý minh bạch</h3>
+          <p className="text-white/70 mb-8 text-lg">Dự án được phê duyệt chính thức, hạ tầng hoàn thiện. Liên hệ ngay để nhận thông tin chi tiết.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button to="/lien-he" variant="orange" size="lg">Nhận tư vấn ngay</Button>
             <Button href="tel:0932888008" variant="outline" size="lg" className="border-white/50 text-white hover:bg-white/10">0932 888 008</Button>

@@ -36,7 +36,7 @@ export default function FloatingActions() {
         target="_blank"
         rel="noopener noreferrer"
         className="floating-btn-pulse"
-        title="TikTok Ero Riverside"
+        title={`TikTok ${contactInfo.projectName}`}
         style={{
           width: 50,
           height: 50,
@@ -82,7 +82,7 @@ export default function FloatingActions() {
         target="_blank"
         rel="noopener noreferrer"
         className="floating-btn-pulse"
-        title="Facebook Ero Riverside"
+        title={`Facebook ${contactInfo.projectName}`}
         style={{
           width: 50,
           height: 50,

@@ -11,7 +11,7 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import { navLinks, images } from '../../data/contact'
+import { contactInfo, navLinks, images } from '../../data/contact'
 
 export default function Header() {
   const { user, isLoggedIn, logout } = useAuth()
@@ -68,7 +68,7 @@ export default function Header() {
           >
             <img
               src={logoSrc}
-              alt="Ero Riverside"
+              alt={contactInfo.projectName}
               onError={handleLogoError}
               style={{
                 height: 50,
